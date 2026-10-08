@@ -12,7 +12,7 @@ function App() {
   return (
     <UserAuthorizationProvider>
       <SiteSelectionProvider>
-        <BrowserRouter basename="/portal/apps/reportReader/">
+        <BrowserRouter basename="/reportReader/">
           <Suspense fallback={<CalciteLoader />}>
             <Routes>
               {/* <Route index element={<Homepage />} /> */}

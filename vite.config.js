@@ -63,5 +63,5 @@ export default defineConfig({
     sourcemap: false,
     target: "es2022",
   },
-  base: "/portal/apps/reportReader/",
+  base: "/reportReader/",
 });

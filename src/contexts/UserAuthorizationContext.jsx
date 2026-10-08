@@ -6,13 +6,13 @@ import PropTypes from "prop-types";
 
 // Configure portal and app URLs based on environment
 const LOCAL_PORT = 5174;
-const LOCAL_BASE_PATH = "/portal/apps/reportReader";
+const LOCAL_BASE_PATH = "/reportReader";
 const isLocalDev = window.location.hostname === "localhost";
 
 // Configure ESRI authentication settings
-esriConfig.portalUrl = "https://atlas.colliers.com/portal";
-esriConfig.request.trustedServers = ["https://atlas.colliers.com"];
-esriConfig.request.corsEnabledServers = ["https://atlas.colliers.com"];
+esriConfig.portalUrl = "https://hntbcorp.maps.arcgis.com";
+esriConfig.request.trustedServers = ["https://hntbcorp.maps.arcgis.com"];
+esriConfig.request.corsEnabledServers = ["https://hntbcorp.maps.arcgis.com"];
 esriConfig.request.interceptors = [
   {
     urls: /^https?:\/\/atlas\.colliers\.com/,
@@ -61,7 +61,7 @@ function UserAuthorizationProvider({ children }) {
         // Use popup: true for better OAuth flow
         // popup: true,
         // popupCallbackUrl: redirectUri,
-        portalUrl: "https://atlas.colliers.com/portal",
+        portalUrl: "https://hntbcorp.maps.arcgis.com",
         preserveUrlHash: true,
       });
       esriId.registerOAuthInfos([info]);

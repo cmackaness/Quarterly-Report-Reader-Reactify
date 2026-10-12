@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react({ devTarget: "es2022" }),
     basicSsl(),
-    visualizer({ filename: "reportReader/stats.html" }),
+    visualizer({ filename: "app/stats.html" }),
   ],
   server: {
     port: 5174,
@@ -29,7 +29,7 @@ export default defineConfig({
     ],
   },
   build: {
-    outDir: "reportReader",
+    outDir: "app",
     chunkSizeWarningLimit: 2000,
     rollupOptions: {
       output: {
@@ -63,5 +63,5 @@ export default defineConfig({
     sourcemap: false,
     target: "es2022",
   },
-  base: "/reportReader/",
+  base: "/app/",
 });

@@ -8,7 +8,7 @@
 html,
 body,
       :root {
-        font-family: 'Open Sans';
+        font-family: 'IBM Plex Sans';
         --optimal-shadow:  0 1px 1px hsl(0deg 0% 0% / 0.075),
           0 2px 2px hsl(0deg 0% 0% / 0.075),
           0 4px 4px hsl(0deg 0% 0% / 0.075),
@@ -100,7 +100,7 @@ body,
         margin: 0;
         height: 100%;
         width: 100%;
-        font-family: 'Open Sans';
+        font-family: 'IBM Plex Sans';
       }
 
       table{ 

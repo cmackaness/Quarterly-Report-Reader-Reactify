@@ -1,13 +1,16 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import { CalciteLoader } from "@esri/calcite-components-react";
 // import App from "./App.jsx";
 const App = lazy(() => import("./App.jsx"));
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const rootKey = "__quarterlyReportReactRoot";
+const root = window[rootKey] ?? ReactDOM.createRoot(document.getElementById("root"));
+window[rootKey] = root;
+
+root.render(
   <React.StrictMode>
-    <Suspense fallback={<CalciteLoader />}>
+    <Suspense>
       <App />
     </Suspense>
   </React.StrictMode>
